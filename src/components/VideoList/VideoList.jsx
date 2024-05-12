@@ -5,8 +5,7 @@ export default function VideoList({ videoList }) {
   return (
     <div className='listimage-container'>
         {videoList.map((video, i) => (
-          <Link key={i} to={`/videos/${video.id.videoId}`}>
-            <div >
+        
           <Link to={`/videos/${video.id}`}>
             <div className='singleimage-container'>
               <img src={video.snippet.thumbnails.default.url} alt="" />
