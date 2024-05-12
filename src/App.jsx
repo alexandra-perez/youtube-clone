@@ -16,11 +16,11 @@ function App() {
     import.meta.env.VITE_API_KEY
   }`;
 
-  const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=1&chart=mostPopular&key=${
+  const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=4&chart=mostPopular&key=${
     import.meta.env.VITE_API_KEY
   }`;
 
-  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${search}&key=${
+  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=0&q=${search}&key=${
     import.meta.env.VITE_API_KEY
   }`;
 
