@@ -41,7 +41,7 @@ export default function ShowVideo() {
         {video.items && <h4>{video.items[0].snippet.description}</h4>}
       </div>
       <div className="comments">
-        <CommentForm video={video} />
+        <CommentForm videoId={videoId}/>
       </div>
     </div>
   );
