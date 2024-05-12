@@ -1,24 +1,24 @@
 .listimage-container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin-bottom: 50px;
-    margin-left: 220px;
-    margin-right: 200px;
+    margin-bottom: 3vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
     
     
     .singleimage-container{
         grid-column: span 1;
-        height: 200px;
-        width:400px;
-        margin:100px 5px;
+        height: 10vw;
+        width:20vw;
+        margin:5vw 0.3vw;
         
         
       
         
     }
     img{
-        width: 400px;
-        border-radius: 10px;
+        width: 20vw;
+        border-radius: 0.6vw;
     }
    
     h2{
