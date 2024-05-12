@@ -1,0 +1,57 @@
+.About {
+  h3 {
+    font-weight: 700;
+  }
+}
+
+.cards {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 50px;
+
+  h1 {
+    font-weight: 700;
+  }
+
+  img {
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
+  }
+
+  .icons {
+    display: flex;
+    gap: 30px;
+  }
+
+  .icon {
+    width: 25px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary {
+padding-top: 200px;
+
+  p {
+    color: #606060;
+  }
+}
+
+@keyframes shake {
+  0% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
+}
+
+.icons:hover img {
+  animation: shake 0.2s ease infinite;
+}
