@@ -12,7 +12,7 @@ export default function SearchBar({ setSearch }) {
     }
 
     return (
-        <div>
+        <div className="searchbar-container">
             <form onSubmit={handleSearch}>
                 <input
                 type="text"
@@ -22,7 +22,7 @@ export default function SearchBar({ setSearch }) {
                 />
             </form>
 
-            This is the search bar
+  
             
         </div>
     )
