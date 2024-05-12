@@ -1,22 +1,31 @@
 .showVideo {
   iframe {
     border-radius: 5px;
+    width: 100%;
+
   }
 
   h2 {
-    font-size: 2rem;
-    line-height: 2.8rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
     font-weight: 700;
+    margin-bottom: 10px;
   }
 
   h3 {
-    font-size: 1.4rem;
-    line-height: 2rem;
+   font-size: 1.2rem;
+   font-weight: 700;
+  }
+
+  h4 {
+    font-size: 1rem;
+    line-height: 1.6rem;
     font-weight: 400;
   }
 
-  .showVideo__description {
+  .description {
     border-radius: 12px;
-    background-color: #f2f2f2;
+    background-color: #272928;
+    padding: 20px;
   }
 }
