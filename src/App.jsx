@@ -15,7 +15,7 @@ function App() {
 
   const singleVideoUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${import.meta.env.VITE_API_KEY}`
 
-  const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=8&chart=mostPopular&key=${import.meta.env.VITE_API_KEY}`
+  const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=6&chart=mostPopular&key=${import.meta.env.VITE_API_KEY}`
 
   const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=pokemon&key=${import.meta.env.VITE_API_KEY}`
 
@@ -47,7 +47,7 @@ function App() {
   return (
     <>
       <Router>
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route path="/" element={<Home videoList={videoList}/>} />
           <Route path="/videos/:id" element={<ShowVideo singleVideoUrl={singleVideoUrl} />} />
