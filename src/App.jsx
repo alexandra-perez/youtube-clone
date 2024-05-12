@@ -10,45 +10,33 @@ import './App.css';
 function App() {
   const [id, setId] = useState('');
   const [videoList, setVideoList] = useState([]);
+  const [search, setSearch] = useState("")
 
- 
-  const singleVideoUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${import.meta.env.VITE_API_KEY}`
-
-  const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=1&chart=mostPopular&key=${import.meta.env.VITE_API_KEY}`
-
-  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=pokemon&key=${
+  const singleVideoUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${
     import.meta.env.VITE_API_KEY
   }`;
 
-  //https://www.googleapis.com/youtube/v3/videoCategories?part=snippet&id=1&key=${import.meta.env.VITE_API_KEY}
+  const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=1&chart=mostPopular&key=${
+    import.meta.env.VITE_API_KEY
+  }`;
 
-  // useEffect(() =>{
-  //   fetch(singleVideoUrl)
-  //   .then((res) => res.json())
-  //   .then(console.log)
-
-  // },[])
-
-  // searching for specific id
-  // useEffect(() =>{
-  //   fetch(mostPopularUrl)
-  //   .then((res) => res.json())
-  //   .then((res) => setId(res.items[0].id))
-  // },[id])
+  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${search}&key=${
+    import.meta.env.VITE_API_KEY
+  }`;
 
   useEffect(() => {
-    fetch(mostPopularUrl)
+    fetch(searchUrl)
       .then((res) => res.json())
       .then((res) => {
         const newObj = structuredClone(res.items);
         setVideoList([...newObj]);
       });
-  }, [id]);
+  }, [search]);
 
   return (
     <>
       <Router>
-        <NavBar/>
+        <NavBar setSearch={setSearch}/>
         <Routes>
           <Route path="/" element={<Home videoList={videoList} />} />
           <Route

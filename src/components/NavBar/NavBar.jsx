@@ -1,5 +1,6 @@
 import About from "../About/About";
 import "./NavBar.scss";
+import SearchBar from "../SearchBar/SearchBar";
 import {Link} from 'react-router-dom'
 
 export default function NavBar() {
