@@ -2,7 +2,6 @@ import './VideoList.scss';
 import { Link } from 'react-router-dom';
 
 export default function VideoList({ videoList }) {
-
   return (
     <div>
       <ul>
@@ -10,7 +9,8 @@ export default function VideoList({ videoList }) {
           <Link key={i} to={`/videos/${video.id}`}>
             <div >
               <img src={video.snippet.thumbnails.default.url} alt="" />
-          </div>
+              <h2>{video.snippet.title}</h2>
+            </div>
           </Link>
         ))}
       </ul>

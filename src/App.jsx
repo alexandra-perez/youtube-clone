@@ -1,15 +1,14 @@
-import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar";
-import Home from "./components/Home/Home";
-import VideoList from "./components/VideoList/VideoList";
-import About from "./components/About/About";
-import ShowVideo from "./components/ShowVideo/ShowVideo";
-import "./App.css";
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
+import Home from './components/Home/Home';
+import VideoList from './components/VideoList/VideoList';
+import About from './components/About/About';
+import ShowVideo from './components/ShowVideo/ShowVideo';
+import './App.css';
 
 function App() {
-  const [video, setVideo] = useState(``);
-  const [id, setId] = useState("");
+  const [id, setId] = useState('');
   const [videoList, setVideoList] = useState([]);
   const [search, setSearch] = useState("")
 
@@ -41,8 +40,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home videoList={videoList} />} />
           <Route
-            path="/videos/:id"
-            element={<ShowVideo singleVideoUrl={singleVideoUrl} />}
+            path="/videos/:videoId"
+            element={<ShowVideo />}
           />
           <Route path="/about" element={<About />} />
         </Routes>
