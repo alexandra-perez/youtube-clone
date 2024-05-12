@@ -11,7 +11,7 @@ export default function NavBar({setSearch}) {
 <SearchBar setSearch={setSearch}/>
 
 
-   <Link to='/about'><h1>About</h1>
+   <Link to='/about'><h1>About us</h1>
     <About/>
    </Link>
 </div>)
