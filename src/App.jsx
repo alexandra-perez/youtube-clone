@@ -16,13 +16,13 @@ function App() {
   const singleVideoUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${import.meta.env.VITE_API_KEY}`
 
   const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=8&chart=mostPopular&key=${import.meta.env.VITE_API_KEY}`
-  
+
   const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=pokemon&key=${import.meta.env.VITE_API_KEY}`
 
   //https://www.googleapis.com/youtube/v3/videoCategories?part=snippet&id=1&key=${import.meta.env.VITE_API_KEY}
 
   // useEffect(() =>{
-  //   fetch(url)
+  //   fetch(singleVideoUrl)
   //   .then((res) => res.json())
   //   .then(console.log)
 
@@ -36,7 +36,6 @@ function App() {
   // },[id])
 
   useEffect(() =>{
-    console.log(mostPopularUrl)
     fetch(mostPopularUrl)
     .then((res) => res.json())
     .then((res) => {
@@ -47,22 +46,12 @@ function App() {
 
   return (
     <>
-     {/* <iframe
-      width="560"
-      height="315"
-      src={`https://www.youtube.com/embed/${id}`}
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe> */}
-    
       <Router>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home videoList={videoList}/>} />
-          <Route path="/videos/:id" element={<ShowVideo />} />
-          <Route path="/about" element={<About />} /> 
+          <Route path="/videos/:id" element={<ShowVideo singleVideoUrl={singleVideoUrl} />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Router>
     </>
