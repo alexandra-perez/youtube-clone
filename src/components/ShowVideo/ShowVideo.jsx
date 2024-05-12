@@ -10,6 +10,7 @@ export default function ShowVideo() {
   }`;
 
   useEffect(() => {
+    console.log(singleVideoUrl)
     fetch(singleVideoUrl)
       .then((res) => res.json())
       .then((res) => {
@@ -36,13 +37,12 @@ export default function ShowVideo() {
     </div>
   );
 }
-
-//  <iframe
-//    width="560"
-//    height="315"
-//    src={`https://www.youtube.com/embed/${id}`}
-//    title="YouTube video player"
-//    frameBorder="0"
-//    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//    allowFullScreen
-//  ></iframe>;
+    //  <iframe
+    //    width="560"
+    //    height="315"
+    //    src={`https://www.youtube.com/embed/${video.id.videoID}`}
+    //    title="YouTube video player"
+    //    frameBorder="0"
+    //    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    //    allowFullScreen
+    //  ></iframe>;

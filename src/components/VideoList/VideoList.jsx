@@ -6,8 +6,8 @@ export default function VideoList({ videoList }) {
     <div>
       <ul>
         {videoList.map((video, i) => (
-          <Link to={`/videos/${video.id}`}>
-            <div>
+          <Link key={i} to={`/videos/${video.id.videoId}`}>
+            <div >
               <img src={video.snippet.thumbnails.default.url} alt="" />
               <h2>{video.snippet.title}</h2>
             </div>
