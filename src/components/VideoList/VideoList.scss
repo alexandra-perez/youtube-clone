@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     margin-bottom: 50px;
-    margin-left: 250px;
+    margin-left: 220px;
     margin-right: 200px;
     
     
@@ -10,7 +10,7 @@
         grid-column: span 1;
         height: 200px;
         width:400px;
-        margin:100px 2px;
+        margin:100px 5px;
         
         
       
@@ -21,7 +21,8 @@
         border-radius: 10px;
     }
    
-    p{
+    h2{
         color: black;
+        padding: 10px 20px;
     }
 }

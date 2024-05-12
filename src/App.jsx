@@ -11,12 +11,10 @@ function App() {
   const [id, setId] = useState('');
   const [videoList, setVideoList] = useState([]);
 
-  const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=8&chart=mostPopular&key=${
-    import.meta.env.VITE_API_KEY
-  }`;
+ 
   const singleVideoUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${import.meta.env.VITE_API_KEY}`
 
-  const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=6&chart=mostPopular&key=${import.meta.env.VITE_API_KEY}`
+  const mostPopularUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=1&chart=mostPopular&key=${import.meta.env.VITE_API_KEY}`
 
   const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=pokemon&key=${
     import.meta.env.VITE_API_KEY
