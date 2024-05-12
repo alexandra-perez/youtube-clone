@@ -1,12 +1,14 @@
 .navbar-container{
-    padding: 20px 300px;
+    padding: 20px 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     img{
-        height: 100px;
+        height: 110px;
     }
-    p{
+    h1{
         margin-top: 50px;
         font-size: 30px;
+        color: black;
+       
     }
 }

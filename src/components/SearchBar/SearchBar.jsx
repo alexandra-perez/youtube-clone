@@ -7,8 +7,8 @@ export default function SearchBar({ setSearch }) {
     function handleSearch (e) {
         e.preventDefault()
         setSearch(e.target.search.value)
-        // e.target.search.value=``
-        // navigate(`/`)
+        e.target.search.value=``
+        navigate(`/`)
 
     }
 
