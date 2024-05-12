@@ -1,22 +1,17 @@
 import "./VideoList.scss";
 
 export default function VideoList({ videoList }) {
-  console.log(videoList);
-
+  
   return (
     <div>
-        <p>hello world</p>
       <ul>
-        {videoList.map((video) => (
+        {videoList.map((video,i) => (
           <iframe
-            key={video.id}
-            width="560"
-            height="315"
-            src={`https://www.youtube.com/embed/${video.id}`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+            key={i}
+            // width="640"
+            // height="360"
+            src={`https://www.youtube.com/embed/${video.id}`}// use "video.id.videoId" when searching
+                                                            // use "video.id." when not searching
           ></iframe>
         ))}
       </ul>
