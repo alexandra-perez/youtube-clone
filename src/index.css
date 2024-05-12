@@ -99,7 +99,7 @@ main {
 body {
   padding: 30px;
   scroll-behavior: smooth;
-  color: #fff;
+  color: black;
 }
 
 a:any-link {
