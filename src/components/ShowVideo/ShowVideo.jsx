@@ -10,6 +10,7 @@ export default function ShowVideo() {
   }`;
 
   useEffect(() => {
+    console.log(singleVideoUrl)
     fetch(singleVideoUrl)
       .then((res) => res.json())
       .then((res) => {
