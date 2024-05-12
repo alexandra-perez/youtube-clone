@@ -1,18 +1,17 @@
-import "./VideoList.scss";
+import './VideoList.scss';
+import { Link } from 'react-router-dom';
 
 export default function VideoList({ videoList }) {
-  
+
   return (
     <div>
       <ul>
-        {videoList.map((video,i) => (
-          <iframe
-            key={i}
-            // width="640"
-            // height="360"
-            src={`https://www.youtube.com/embed/${video.id}`}// use "video.id.videoId" when searching
-                                                            // use "video.id." when not searching
-          ></iframe>
+        {videoList.map((video, i) => (
+          <Link to={`/videos/${video.id}`}>
+            <div>
+              <img src={video.snippet.thumbnails.default.url} alt="" />
+          </div>
+          </Link>
         ))}
       </ul>
     </div>
