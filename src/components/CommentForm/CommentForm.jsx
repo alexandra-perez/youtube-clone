@@ -3,22 +3,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function CommentForm({ videoId }) {
+  
   const navigate = useNavigate();
-
-  //page mounts
-  //fetch mock api
-  //get promise
-  //if true, setComment to be true
-  //else do nothing "Not Found"
-  //if setComment is true
-  //display comment under form
-  //form on submit,
-  //if setComment is true
-  //invoke update comments
-  //else add new comments
-  //setComments to be true after.
-
-  console.log(videoId);
 
   let BASE_URL = "https://6637c889288fedf69381538c.mockapi.io/api/v1/notes";
 
@@ -87,7 +73,7 @@ export default function CommentForm({ videoId }) {
 
   return (
     <div className="CommentForm">
-      <p>Comment</p>
+      <p><span>{displayComment.length}</span> Comments</p>
       <form onSubmit={addComments}>
         <label>
           Commenter Name
