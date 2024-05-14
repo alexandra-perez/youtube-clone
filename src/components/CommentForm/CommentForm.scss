@@ -1,0 +1,27 @@
+.CommentForm{
+    input{
+        width: 40vw;
+        padding: 0.3vw;
+        border-radius: 10px;
+
+    }
+    .submitbutton{
+        width: 10vw;
+        margin-bottom: 0.7vw;
+    }
+    li{
+        width: 40vw;
+        margin: 0.2vw 1vw;
+        padding: 0.9vw;
+        list-style: none;
+        border: 2px solid lightgray;
+
+
+        button{
+            padding: 0.2vw 0.3vw;
+            width:5vw;
+            margin: 0.5vw;
+        }
+    }
+
+}

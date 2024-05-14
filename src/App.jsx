@@ -35,6 +35,7 @@ function App() {
       .then((res) => res.json())
       .then((res) => {
         const newObj = structuredClone(res.items);
+        console.log(newObj)
         setVideoList([...newObj]);
       });
   }, [search]);

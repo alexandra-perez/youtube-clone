@@ -1,7 +1,19 @@
 .showVideo {
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  margin: 1vw 10vw;
+  .video{
+    margin-top: 5vw;
+    grid-column: 1/8;
+
+
+  }
+  
   iframe {
+    grid-column: 1/6;
+    
     border-radius: 5px;
-    width: 100%;
+
 
   }
 
@@ -18,14 +30,26 @@
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 0.9vw;
     line-height: 1.6rem;
     font-weight: 400;
+   padding: 1vw 1vw;
   }
 
   .description {
+    margin-top: 1vw;
     border-radius: 12px;
-    background-color: #272928;
     padding: 20px;
+    grid-column:  1/8;
+    background-color: lightgray;
+    width: 900px;
+  }
+  .comments{
+    grid-column: 1/ 8;
+    margin-top: 1vw;
+  }
+  .title{
+    grid-column: 1/7;
+    width: 900px;
   }
 }
