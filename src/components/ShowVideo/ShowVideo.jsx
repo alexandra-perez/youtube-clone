@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import CommentForm from '../CommentForm/CommentForm';
+import Sidebar from '../Sidebar/Sidebar';
+
 import './ShowVideo.scss';
 
 export default function ShowVideo() {
@@ -33,6 +35,7 @@ export default function ShowVideo() {
           allowFullScreen
         ></iframe>
       </div>
+      <Sidebar/>
         
       <div className="title">
         {video.items && <h2>{video.items[0].snippet.title}</h2>}
