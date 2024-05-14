@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import VideoList from './components/VideoList/VideoList';
 import About from './components/About/About';
 import ShowVideo from './components/ShowVideo/ShowVideo';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
         </Routes>
+      <Footer/>
       </Router>
     </>
   );
