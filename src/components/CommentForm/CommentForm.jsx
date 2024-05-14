@@ -73,7 +73,7 @@ export default function CommentForm({ videoId }) {
 
   return (
     <div className="CommentForm">
-      <p><span>{displayComment.length}</span> Comments</p>
+      <h2><span>{displayComment.length}</span> Comments</h2>
       <form onSubmit={addComments}>
         <label>
           Commenter Name

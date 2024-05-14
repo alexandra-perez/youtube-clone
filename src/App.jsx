@@ -20,7 +20,7 @@ function App() {
     import.meta.env.VITE_API_KEY
   }`;
 
-  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&q=${search}&key=${
+  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${search}&key=${
     import.meta.env.VITE_API_KEY
   }`;
 
@@ -29,6 +29,7 @@ function App() {
       .then((res) => res.json())
       .then((res) => {
         const newObj = structuredClone(res.items);
+        console.log(newObj)
         setVideoList([...newObj]);
       });
   }, [search]);
