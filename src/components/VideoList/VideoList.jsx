@@ -1,10 +1,11 @@
 import './VideoList.scss';
 import { Link } from 'react-router-dom';
+import Category from '../Category/Category';
 
-export default function VideoList({ videoList }) {
+export default function VideoList({ videoList, setCategory }) {
   return (
     <div className='listimage-container'>
-      <p>This is the category bar</p>
+      <Category setCategory={setCategory}/>
         {videoList.map((video, i) => (
 
           <Link to={`/videos/${video.id.videoId ? video.id.videoId : video.id}`}>

@@ -31,7 +31,7 @@ function App() {
   }`
 
   useEffect(() => {
-    fetch(searchUrl)
+    fetch(categoryUrl)
       .then((res) => res.json())
       .then((res) => {
         const newObj = structuredClone(res.items);
@@ -44,7 +44,7 @@ function App() {
       <Router>
         <NavBar setSearch={setSearch}/>
         <Routes>
-          <Route path="/" element={<Home videoList={videoList} />} />
+          <Route path="/" element={<Home setCategory={setCategory} videoList={videoList} />} />
           <Route
             path="/videos/:videoId"
             element={<ShowVideo />}
