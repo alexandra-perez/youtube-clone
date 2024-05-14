@@ -11,6 +11,7 @@ function App() {
   const [id, setId] = useState('');
   const [videoList, setVideoList] = useState([]);
   const [search, setSearch] = useState("")
+  const [category, setCategory] = useState(0)
 
   const singleVideoUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${
     import.meta.env.VITE_API_KEY
@@ -20,15 +21,18 @@ function App() {
     import.meta.env.VITE_API_KEY
   }`;
 
-  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&key=${
+  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${search}&key=${
     import.meta.env.VITE_API_KEY
   }`;
+
+  const categoryUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=1&chart=mostPopular&videoCategoryId=${category}&key=${
+    import.meta.env.VITE_API_KEY
+  }`
 
   useEffect(() => {
     fetch(searchUrl)
       .then((res) => res.json())
       .then((res) => {
-        // console.log(res.items)
         const newObj = structuredClone(res.items);
         setVideoList([...newObj]);
       });
