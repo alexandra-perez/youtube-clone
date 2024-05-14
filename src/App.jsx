@@ -30,8 +30,18 @@ function App() {
     import.meta.env.VITE_API_KEY
   }`
 
+  // useEffect(() => {
+  //   fetch(categoryUrl)
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       const newObj = structuredClone(res.items);
+  //       console.log(newObj)
+  //       setVideoList([...newObj]);
+  //     });
+  // }, [category ? category : search]);
+
   useEffect(() => {
-    fetch(categoryUrl)
+    fetch(searchUrl)
       .then((res) => res.json())
       .then((res) => {
         const newObj = structuredClone(res.items);

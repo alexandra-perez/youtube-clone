@@ -37,7 +37,9 @@ export default function Category ({setCategory}) {
 
     function changeCategory(e) {
         console.log(e.target.value)
-        setCategory(categoryObj[e.target.value])
+        const catNumber = categoryObj[e.target.value]
+        console.log(catNumber)
+        setCategory(catNumber)
     }
 
     return (
