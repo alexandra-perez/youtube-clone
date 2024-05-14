@@ -73,10 +73,13 @@ export default function CommentForm({ videoId }) {
 
   return (
     <div className="CommentForm">
-      <p><span>{displayComment.length}</span> Comments</p>
+      <h2><span>{displayComment.length}</span> Comments</h2>
       <form onSubmit={addComments}>
+        <div className="commenter">
         <label>
           Commenter Name
+          <br />
+          <br />
           <input
             onChange={handleTextChange}
             type="text"
@@ -84,9 +87,14 @@ export default function CommentForm({ videoId }) {
             value={newComment.comments[0].commenter}
           />
         </label>
+        </div>
+       
         <br />
+        <div className="comment">
         <label>
           Comment
+          <br />
+          <br />
           <input
             onChange={handleTextChange}
             type="text"
@@ -94,14 +102,19 @@ export default function CommentForm({ videoId }) {
             value={newComment.comments[0].comment}
           />
         </label>
+        </div>
+       
         <br />
-        <input type="submit" value="Add Comment" />
+        <input className="submitbutton" type="submit" value="Add Comment" />
       </form>
       <ul>
         {displayComment[0] &&
           displayComment.map((ele) => (
             <li key={ele.comment}>
-              {ele.comments[0].commenter} says, "{ele.comments[0].comment}"
+              <h2>{ele.comments[0].commenter} </h2>
+              <p>"{ele.comments[0].comment}"</p>
+               
+              <br />
               <button onClick={() => deleteComment(ele.id)}>Delete</button>
             </li>
           ))}
