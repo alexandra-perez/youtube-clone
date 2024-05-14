@@ -4,8 +4,10 @@ import Category from '../Category/Category';
 
 export default function VideoList({ videoList, setCategory }) {
   return (
-    <div className='listimage-container'>
+    <div>
+    
       <Category setCategory={setCategory}/>
+      <div className='listimage-container'>
         {videoList.map((video, i) => (
 
           <Link to={`/videos/${video.id.videoId ? video.id.videoId : video.id}`}>
@@ -15,6 +17,7 @@ export default function VideoList({ videoList, setCategory }) {
             </div>
           </Link>
         ))}
+    </div>
     </div>
   );
 }

@@ -22,23 +22,23 @@ function App() {
     import.meta.env.VITE_API_KEY
   }`;
 
-  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${search}&key=${
+  const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&key=${
     import.meta.env.VITE_API_KEY
   }`;
 
-  const categoryUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=1&chart=mostPopular&videoCategoryId=${category}&key=${
+  const categoryUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=10&chart=mostPopular&videoCategoryId=${category}&key=${
     import.meta.env.VITE_API_KEY
   }`
 
-  // useEffect(() => {
-  //   fetch(categoryUrl)
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       const newObj = structuredClone(res.items);
-  //       console.log(newObj)
-  //       setVideoList([...newObj]);
-  //     });
-  // }, [category ? category : search]);
+  useEffect(() => {
+    fetch(categoryUrl)
+      .then((res) => res.json())
+      .then((res) => {
+        const newObj = structuredClone(res.items);
+        console.log(newObj)
+        setVideoList([...newObj]);
+      });
+  }, [category ? category : search]);
 
   useEffect(() => {
     fetch(searchUrl)
