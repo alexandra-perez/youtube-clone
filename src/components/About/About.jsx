@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import gitHubIcon from '../../assets/github.png';
 import linkedinIcon from '../../assets/linkedin.png';
 import emailIcon from '../../assets/email.png';
@@ -89,15 +88,6 @@ export default function About() {
             </a>
           </div>
         </div>
-      </div>
-      <div className="summary">
-        <Link to="/">
-          <h3>YouTube Clone</h3>
-        </Link>
-          <p>
-            Built with React, React Router, Sass, mockAPI, and the Google
-            YouTube Data API v3
-          </p>
       </div>
     </div>
   );
