@@ -28,6 +28,7 @@ function App() {
     fetch(searchUrl)
       .then((res) => res.json())
       .then((res) => {
+        // console.log(res.items)
         const newObj = structuredClone(res.items);
         setVideoList([...newObj]);
       });
