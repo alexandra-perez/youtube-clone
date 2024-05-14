@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="Footer">
       <hr />
-      <Link to="/">
+      <Link to="/" onClick={() => {window.location.href="/"}}>
         <h3>YouTube Clone</h3>
       </Link>
       <p>
