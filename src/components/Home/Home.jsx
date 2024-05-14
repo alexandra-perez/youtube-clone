@@ -6,7 +6,6 @@ export default function Home ({videoList}) {
     return (
 
         <div className="homepage-container">
-
             <VideoList videoList={videoList}/>
         </div>
     )
