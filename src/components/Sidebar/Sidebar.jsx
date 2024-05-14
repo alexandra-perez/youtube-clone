@@ -5,7 +5,7 @@ import{Link} from 'react-router-dom'
 // export default function Sidebar() {
 //     return (<div className='sidebar-container'>
 //     hello world
-    
+
 //     </div>)
 // }
 export default function Sidebar() {
@@ -27,10 +27,9 @@ export default function Sidebar() {
     return (
       <div className='sidebar-container'>
           {sideBarVideos.map((video, i) => (
-          
             <Link to={`/videos/${video.id}`}>
               <div className='singleimage-container'>
-                <img src={video.snippet.thumbnails.default.url} alt="" />
+                <img src={video.snippet.thumbnails.high.url} alt="" />
                 <h2>{video.snippet.title}</h2>
               </div>
             </Link>
