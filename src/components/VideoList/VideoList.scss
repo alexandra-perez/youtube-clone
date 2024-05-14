@@ -1,27 +1,27 @@
-.listimage-container{
+.listimage-container {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
     margin-bottom: 3vw;
     margin-left: 10vw;
     margin-right: 10vw;
-    
-    
-    .singleimage-container{
-        grid-column: span 1;
-        height: 10vw;
-        width:20vw;
-        margin:6vw 0.3vw;
-        
-        
-      
-        
+
+    .singleimage-container {
+        height: 20vw;
+        width: 100%;
+        margin: 3vw 0.3vw;
+        border: 5px solid blue;
+        position: relative;
     }
-    img{
-        width: 20vw;
+
+    img {
+        width: 100%;
+        height: auto;
         border-radius: 0.6vw;
+        display: block;
     }
-   
-    h2{
+
+    h2 {
         color: black;
         padding: 10px 20px;
     }
