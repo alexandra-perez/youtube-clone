@@ -10,7 +10,7 @@ export default function VideoList({ videoList, setCategory }) {
 
           <Link to={`/videos/${video.id.videoId ? video.id.videoId : video.id}`}>
             <div className='singleimage-container'>
-              <img src={video.snippet.thumbnails.default.url} alt="" />
+              <img src={video.snippet.thumbnails.high.url} alt="" />
               <h2>{video.snippet.title}</h2>
             </div>
           </Link>
