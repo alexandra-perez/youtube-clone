@@ -35,7 +35,7 @@ export default function Sidebar() {
       <div className='sidebar-container'>
           {sideBarVideos.map((video, i) => (
           
-            <Link to={`/videos/${video.id}`}>
+            <Link to={`/videos/${video.id}`}onClick={() => {window.location.href=`/videos/${video.id}`}}>
               <div className='singleimage-container'>
                 <img src={video.snippet.thumbnails.default.url} alt="" />
                 <h2>{video.snippet.title}</h2>
