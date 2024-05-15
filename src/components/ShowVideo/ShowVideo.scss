@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(10,1fr);
   margin: 1vw 10vw;
+  margin-left: 50px;
   .video{
     margin-top: 5vw;
     grid-column: 1/8;
@@ -37,19 +38,22 @@
   }
 
   .description {
-    margin-top: 1vw;
+    margin-top: -39vw;
     border-radius: 12px;
     padding: 20px;
     grid-column:  1/8;
     background-color: lightgray;
     width: 900px;
+    height: 100px;
+    overflow-y: scroll;
   }
   .comments{
     grid-column: 1/ 8;
-    margin-top: 1vw;
+    margin-top: -30vw;
   }
   .title{
     grid-column: 1/7;
     width: 900px;
+    margin-top: -43vw;
   }
 }
