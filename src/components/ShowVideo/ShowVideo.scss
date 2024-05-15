@@ -1,21 +1,17 @@
 .showVideo {
   display: grid;
-  grid-template-columns: repeat(10,1fr);
+  grid-template-columns: repeat(10, 1fr);
   margin: 1vw 10vw;
-  margin-left: 50px;
-  .video{
+  border: 5px solid blue;
+
+  .video {
     margin-top: 5vw;
     grid-column: 1/8;
-
-
   }
-  
+
   iframe {
     grid-column: 1/6;
-    
     border-radius: 5px;
-
-
   }
 
   h2 {
@@ -26,32 +22,34 @@
   }
 
   h3 {
-   font-size: 1.2rem;
-   font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 
   h4 {
     font-size: 0.9vw;
     line-height: 1.6rem;
     font-weight: 400;
-   padding: 1vw 1vw;
+    padding: 1vw 1vw;
   }
 
   .description {
     margin-top: -39vw;
     border-radius: 12px;
     padding: 20px;
-    grid-column:  1/8;
+    grid-column: 1/8;
     background-color: lightgray;
     width: 900px;
     height: 100px;
     overflow-y: scroll;
   }
-  .comments{
+
+  .comments {
     grid-column: 1/ 8;
     margin-top: -30vw;
   }
-  .title{
+
+  .title {
     grid-column: 1/7;
     width: 900px;
     margin-top: -43vw;
