@@ -13,7 +13,10 @@ export default function NavBar({ setSearch }) {
           alt=""
         />
       </Link>
+      <div className="searchBar">
+
       <SearchBar setSearch={setSearch} />
+      </div>
 
       <Link to="/about">
         <h1>About us</h1>
