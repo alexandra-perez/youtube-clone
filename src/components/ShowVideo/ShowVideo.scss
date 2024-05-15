@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(10,1fr);
   margin: 1vw 10vw;
+  margin-left: 50px;
   .video{
     margin-top: 5vw;
     grid-column: 1/8;
