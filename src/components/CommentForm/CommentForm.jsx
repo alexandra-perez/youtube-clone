@@ -1,24 +1,23 @@
-import "./CommentForm.scss";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import './CommentForm.scss';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function CommentForm({ videoId }) {
-  
   const navigate = useNavigate();
 
-  let BASE_URL = "https://6637c889288fedf69381538c.mockapi.io/api/v1/notes";
+  let BASE_URL = 'https://6637c889288fedf69381538c.mockapi.io/api/v1/notes';
 
   const [comment, setComment] = useState({
-    commenter: "",
-    comment: "",
+    commenter: '',
+    comment: '',
   });
 
   const [newComment, setNewComment] = useState({
     videoId: `${videoId}`,
     comments: [
       {
-        commenter: "",
-        comment: "",
+        commenter: '',
+        comment: '',
       },
     ],
   });
@@ -26,7 +25,7 @@ export default function CommentForm({ videoId }) {
   const [displayComment, setDisplayComment] = useState({});
 
   useEffect(() => {
-    fetch("https://6637c889288fedf69381538c.mockapi.io/api/v1/notes")
+    fetch('https://6637c889288fedf69381538c.mockapi.io/api/v1/notes')
       .then((response) => response.json())
       .then((response) => {
         const filtered = response.filter((ele) => ele.videoId === videoId);
@@ -44,9 +43,9 @@ export default function CommentForm({ videoId }) {
 
   function createNewComment(newComment) {
     const options = {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify(newComment),
-      headers: { "Content-Type": "application/json" },
+      headers: { 'Content-Type': 'application/json' },
     };
     return fetch(`${BASE_URL}`, options)
       .then((response) => {
@@ -64,7 +63,7 @@ export default function CommentForm({ videoId }) {
   }
 
   function deleteComment(id) {
-    const options = { method: "DELETE" };
+    const options = { method: 'DELETE' };
     return fetch(
       `https://6637c889288fedf69381538c.mockapi.io/api/v1/notes/${id}`,
       options
@@ -73,49 +72,55 @@ export default function CommentForm({ videoId }) {
 
   return (
     <div className="CommentForm">
-      <h2><span>{displayComment.length}</span> Comments</h2>
+      <h2>
+        <span>{displayComment.length}</span> Comments
+      </h2>
       <form onSubmit={addComments}>
         <div className="commenter">
-        <label>
-          Commenter Name
-          <br />
-          <br />
-          <input
-            onChange={handleTextChange}
-            type="text"
-            id="commenter"
-            value={newComment.comments[0].commenter}
-          />
-        </label>
+          <label>
+            Commenter Name
+            <br />
+            <br />
+            <input
+              onChange={handleTextChange}
+              type="text"
+              id="commenter"
+              value={newComment.comments[0].commenter}
+            />
+          </label>
         </div>
-       
+
         <br />
         <div className="comment">
-        <label>
-          Comment
-          <br />
-          <br />
-          <input
-            onChange={handleTextChange}
-            type="text"
-            id="comment"
-            value={newComment.comments[0].comment}
-          />
-        </label>
+          <label>
+            Comment
+            <br />
+            <br />
+            <input
+              onChange={handleTextChange}
+              type="text"
+              id="comment"
+              value={newComment.comments[0].comment}
+            />
+          </label>
         </div>
-       
+
         <br />
-        <input className="submitbutton" type="submit" value="Add Comment" />
+        <input className="submit-button" type="submit" value="Add Comment" />
       </form>
       <ul>
         {displayComment[0] &&
           displayComment.map((ele) => (
             <li key={ele.comment}>
-              <h2>{ele.comments[0].commenter} </h2>
-              <p>"{ele.comments[0].comment}"</p>
-               
+              <p>
+                @{ele.comments[0].commenter}{' '}
+                <span>{ele.comments[0].comment}</span>
+              </p>
+
               <br />
-              <button onClick={() => deleteComment(ele.id)}>Delete</button>
+              <button onClick={() => deleteComment(ele.id)}>
+              Delete
+              </button>
             </li>
           ))}
       </ul>

@@ -1,27 +1,39 @@
-.CommentForm{
-    input{
+.CommentForm {
+    input {
         width: 40vw;
         padding: 0.3vw;
         border-radius: 10px;
+        border: 1px solid #d3d3d3;
+    }
 
-    }
-    .submitbutton{
-        width: 10vw;
+    button {
+        padding: 3px 15px;
         margin-bottom: 0.7vw;
+        border-radius: 10px;
+        border: none;
     }
-    li{
-        width: 40vw;
-        margin: 0.2vw 1vw;
+
+    li {
+        width: 100%;
         padding: 0.9vw;
         list-style: none;
-        border: 2px solid lightgray;
+        display: flex;
+        justify-content: space-between;
 
-
-        button{
-            padding: 0.2vw 0.3vw;
-            width:5vw;
-            margin: 0.5vw;
+        p {
+            font-size: 1rem;
+            font-weight: 700;
         }
+
+        span {
+            font-weight: normal;
+        }
+
     }
 
+}
+
+.submit-button {
+    background-color: #FE0000;
+    color: #fff;
 }
