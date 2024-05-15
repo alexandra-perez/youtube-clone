@@ -15,6 +15,6 @@ This project is a YouTube clone built using React, React Router DOM, and SCSS. I
 [See our site live on Netlify!](https://therealyoutube.netlify.app/)
 
 # Contributors
-Ayyoub Belibel [ayoublos](https://github.com/ayoublos)
-Alexandra Perez [alexandra-perez](https://github.com/alexandra-perez)
-Runquan (Ray) Zhou [runquan-ray-zhou](https://github.com/runquan-ray-zhou)
+* Ayyoub Belibel [ayoublos](https://github.com/ayoublos)
+* Alexandra Perez [alexandra-perez](https://github.com/alexandra-perez)
+* Runquan (Ray) Zhou [runquan-ray-zhou](https://github.com/runquan-ray-zhou)
