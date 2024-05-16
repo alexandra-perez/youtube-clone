@@ -9,11 +9,12 @@ import{Link, useParams} from 'react-router-dom'
 //     </div>)
 // }
 export default function Sidebar() {
+  let array=[0,1,2,10,15,17,20,22,23,24,25,26,28,29]
   function random(){
-    return Math.floor(Math.random()*30)
+    return array[Math.floor(Math.random()*array.length)]
   }
   let number=random()
-
+console.log(number+`good`)
 
   const { videoId } = useParams();
     const[sideBarVideos,setSideBarVideos]=useState([])
